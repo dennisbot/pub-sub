@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pub/Sub test</title>
+</head>
+<body>
+
+<h1>Pub/Sub Test</h1>
+<p>Check the results on the console.</p>
+
+<script src="pubsub.js"></script>
+<script type="text/javascript">
+
+
+    // subscribe to events
+
+    var subscription1 = pubsub.subscribe('newEvent', function (data) {
+        console.log('Subscription1/' + data.eventName + ' ocurred.');
+    });
+
+    var subscription2 = pubsub.subscribe('newEvent', function (data) {
+        console.log('Subscription2/' + data.eventName + ' ocurred.');
+    });
+
+    // publish event - should log subscription1 and subscription2    
+    pubsub.publish('newEvent', { eventName : 'newEvent' });
+
+    // unsubscribe subscription1 from event
+    pubsub.unsubscribe(subscription1);
+
+    // publish event - should log only subscription2
+    pubsub.publish('newEvent', { eventName : 'newEvent' });
+
+</script>
+
+</body>
+</html>
