@@ -1,4 +1,4 @@
-Javascript Pub/Sub implmentation with plain javascript
+Javascript Pub/Sub implementation with plain javascript
 
 
 ###### Example of usage:
@@ -23,3 +23,6 @@ pubsub.unsubscribe(subscription1);
 // publish event - should log only subscription2
 pubsub.publish('newEvent', { eventName : 'newEvent' });
 ```
+
+###### Demo
+http://jsfiddle.net/nmoliveira/YkPar/
