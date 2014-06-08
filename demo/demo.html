@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pub/Sub Demo</title>
+
+<style type="text/css">
+    
+    ul {
+        list-style-type: none;
+    }
+    .item {
+        float: left;
+        width: 80px;
+    }
+
+</style>
+
+</head>
+<body>
+
+<h3>Online Shopping</h3>
+
+<div>Cart: <span id="total-items">0</span> items</div>
+
+<ul id="shopping-list">
+    <li>
+        <div class="item">Pizza</div>
+        <input type="button" class="add-to-cart" value="+">
+    </li>
+    <li>
+        <div class="item">Beer</div>
+        <input type="button" class="add-to-cart" value="+">
+    </li>
+    <li>
+        <div class="item">Coffe</div>
+        <input type="button" class="add-to-cart" value="+">
+    </li>
+</ul>
+
+<p>My Trolley</p>
+
+<ul id="trolley">
+
+</ul>
+
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="lib/js/pubsub.js"></script>
+<script src="lib/js/completeTrolley.js"></script>
+<script src="lib/js/simpleTrolley.js"></script>
+<script src="lib/js/demo.js"></script>
+
+</body>
+</html>
